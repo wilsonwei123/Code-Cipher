@@ -1,7 +1,7 @@
 # Code-Cipher
 A work in progess fun project on different encoding methods. Currently, it is still in its beginning stages and is being updated.
 # Installation
-Clone the respository
+Clone the repository
 ```
 git clone https://github.com/wilsonwei123/Code-Cipher.git
 ```
