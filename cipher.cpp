@@ -55,11 +55,6 @@ int encrypt() {
 
     vector<long long> encryption_key = order(ar_to_work);
 
-    for (int i = 0; i < encryption_key.size(); i++) {
-        cout << encryption_key[i];
-    }
-    cout << "\n";
-
     string input;
     cout << "Enter your message (no spaces) to encrypt: ";
     cin >> input;
