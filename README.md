@@ -1,2 +1,16 @@
 # Code-Cipher
-Me trying to encode and decode stuff
+A work in progess fun project on different encoding methods.
+# Installation
+Clone the respository
+```
+git clone https://github.com/wilsonwei123/Code-Cipher.git
+```
+Change to the correct directory
+```
+cd Code-Cipher
+```
+Create executable (if using windows, you may need to download MinGW first)
+```
+g++ cipher.cpp -o cipher -std=c++17
+```
+Then run, with either ```./cipher``` for mac or ```cipher.exe``` for windows.
