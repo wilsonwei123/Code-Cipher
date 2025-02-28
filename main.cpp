@@ -1,4 +1,5 @@
 #include "columnar.hpp"
+#include "affine.hpp"
 
 using namespace std;
 
