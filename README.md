@@ -11,6 +11,6 @@ cd Code-Cipher
 ```
 Create executable (if using windows, you may need to download MinGW first)
 ```
-g++ cipher.cpp -o cipher -std=c++17
+g++ columnar.cpp main.cpp -o cipher -std=c++17
 ```
 Then run, with either ```./cipher``` for mac or ```cipher.exe``` for windows.

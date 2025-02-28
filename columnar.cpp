@@ -1,7 +1,4 @@
-#include <vector>
-#include <string>
-#include <unordered_map>
-#include <iostream>
+#include "columnar.hpp"
 
 using namespace std;
 
@@ -49,8 +46,8 @@ int encrypt() {
     };
     cout << "Enter your encryption key: ";
     cin >> word_input;
-    for (long long i = 0; i < word_input.size(); i++) {
-        ar_to_work.push_back(alphabet[word_input[i]]);
+    for (char c : word_input) {
+        ar_to_work.push_back(alphabet[c]);
     }
 
     vector<long long> encryption_key = order(ar_to_work);
@@ -79,7 +76,7 @@ int encrypt() {
 
     remainder_grid = input;
     for (long long i = 0; i < (greatest_ek - input.size()); i++) {
-        remainder_grid += '\0';
+        remainder_grid += 'X';
     }
 
     for (long long i = 1; i <= greatest_ek; i++) {
@@ -87,7 +84,7 @@ int encrypt() {
             cout << grid[j][encryption_map[i]];
         }
 
-        if (remainder_grid[encryption_map[i]] != '\0') {
+        if (remainder_grid[encryption_map[i]] != 'X') {
             cout << remainder_grid[encryption_map[i]];
         }
     }
@@ -97,10 +94,6 @@ int encrypt() {
 }
 
 int decrypt() {
-    string input, messy_remainder = "", remainder = "";
-    cout << "Enter your string to decrypt: ";
-    cin >> input;
-
     string word_input;
     vector<long long> ar_to_work;
     unordered_map<char, long long> alphabet = {
@@ -113,9 +106,13 @@ int decrypt() {
     };
     cout << "Enter your decryption key: ";
     cin >> word_input;
-    for (long long i = 0; i < word_input.size(); i++) {
-        ar_to_work.push_back(alphabet[word_input[i]]);
+    for (char c : word_input) {
+        ar_to_work.push_back(alphabet[c]);
     }
+
+    string input, messy_remainder = "", remainder = "";
+    cout << "Enter your string to decrypt: ";
+    cin >> input;
 
     vector<long long> decryption_key = order(ar_to_work);
 
@@ -166,7 +163,7 @@ int decrypt() {
     return 0;
 }
 
-int main() {
+int home_columnar() {
     int ans;
     cout << "Encrypt (enter 1) or Decrypt (enter 2): ";
     cin >> ans;
@@ -175,5 +172,23 @@ int main() {
     } else if (ans == 2) {
         decrypt();
     }
+    
+    /* else if (ans == 3) {
+        long long key_size;
+        vector<long long> passkey;
+        cin >> key_size;
+        for (long long i = 0; i < key_size; i++) {
+            long long dummy_var;
+            cin >> dummy_var;
+            passkey.push_back(dummy_var);
+        }
+
+        for (long long  num : order(passkey)) {
+            cout << num;
+        }
+        cout << "\n";
+    }
+    */
+   
     return 0;
 }
