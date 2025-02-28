@@ -58,7 +58,7 @@ int encrypt() {
     string remainder_grid;
     vector<string> grid;
     unordered_map<long long, long long> encryption_map;
-    long long encryption_len = 5, greatest_ek = return_greatest_pos(encryption_key), col_num;
+    long long encryption_len = encryption_key.size(), greatest_ek = return_greatest_pos(encryption_key), col_num;
     col_num = input.size() / encryption_len;
 
     for (long long i = 0; i < greatest_ek; i++) {
@@ -189,6 +189,6 @@ int home_columnar() {
         cout << "\n";
     }
     */
-   
+
     return 0;
 }
