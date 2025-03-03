@@ -1,5 +1,5 @@
 # Code-Cipher
-A work in progess fun project on different encoding methods. Currently, it is still in its beginning stages and is being updated.
+A work in progess fun project on different encoding methods.
 # Installation
 Clone the repository
 ```
